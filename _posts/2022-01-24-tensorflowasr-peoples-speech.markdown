@@ -16,12 +16,12 @@ In this tutorial, we will learn to use this dataset to fine tune a pre-trained m
 `python3 -m venv ~/environments-virtual/your-preferred-environment-name`<br /><br />
 3. Activate the virtual environment created in the above step using the following command<br /><br />
 `source ~/environments-virtual/your-preferred-environment-name/bin/activate`<br /><br />
-4. Install the [peoples-speech-tf-conformer] as follows<br /><br />
+4. Install the [peoples-speech-tf-conformer](https://github.com/sudnya/peoples-speech-tf-conformer) as follows<br /><br />
 `pip install git+git://github.com/sudnya/peoples-speech-tf-conformer`<br /><br />
 
 # 2. The pretrained model
 The [TensorflowASR repository](https://github.com/TensorSpeech/TensorFlowASR) provides a pre-trained model of the subword Conformer ready to be downloaded from [here.](https://drive.google.com/drive/folders/1VAihgSB5vGXwIVTl3hkUk95joxY1YbfW)
-The [peoples-speech-tf-conformer repo](https://github.com/sudnya/peoples-speech-tf-conformer) contains the necessary files of this pretrained model [here.](https://github.com/sudnya/peoples-speech-tf-conformer/tree/master/peoples_speech_tf_conformer/pretrained_subword_conformer).
+The [peoples-speech-tf-conformer repo](https://github.com/sudnya/peoples-speech-tf-conformer) contains the necessary files of this pretrained model [here](https://github.com/sudnya/peoples-speech-tf-conformer/tree/master/peoples_speech_tf_conformer/pretrained_subword_conformer).
 
 # 3. Download the dataset
 #### 3.1 Download the manifest file
@@ -35,7 +35,7 @@ A small subset of the peoples speech dataset was downloaded by running the follo
 
 
 # 4. Update the config file
-An example configuration file can be found [here](https://github.com/sudnya/peoples-speech-tf-conformer/blob/master/peoples-speech-dataset-config.yml)<br />
+An example configuration file can be found [here](https://github.com/sudnya/peoples-speech-tf-conformer/blob/master/peoples-speech-dataset-config.yml).<br />
 1. Update the path to the vocabulary file under the `decoder_config` section to the file downloaded in the pretrained model step above.<br /><br />
 `vocabulary: ~/path-to-the-pretrained-subword-conformer/conformer.subwords`<br /><br />
 2. Update the path to the `corpus_files` in the `decoder_config` to the dataset file for the dataset mentioned in the [download the dataset section](#3. Download the dataset). Note that the dataset file is expected to be jsonlines. Here is an example line that represents the expected format<br /><br />
