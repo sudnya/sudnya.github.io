@@ -6,11 +6,11 @@ categories: blog
 ---
 [People’s Speech](https://mlcommons.org/en/peoples-speech/) is among the world’s largest English speech recognition datasets licensed for academic and commercial use. It includes 30,000+ hours of transcribed speech in English with a diverse set of speakers and acoustic environments. This open dataset by [MLCommons.org](https://mlcommons.org/en/) is large enough to train speech-to-text systems and is available with a permissive license.
 
-In this tutorial, we will learn to use this dataset to fine tune a pre-trained model. We’ll train this model locally and leverage pre-trained models released by [TensorflowASR] (https://github.com/TensorSpeech/TensorFlowASR).
+In this tutorial, we will learn to use this dataset to fine tune a pre-trained model. We’ll train this model locally and leverage pre-trained models released by [TensorflowASR](https://github.com/TensorSpeech/TensorFlowASR).
 
 
 # 1. Install peoples-speech-tf-conformer
-1. Clone the [peoples-speech-tf-conformer repo] (https://github.com/sudnya/peoples-speech-tf-conformer) using the following command<br /><br />
+1. Clone the [peoples-speech-tf-conformer repo](https://github.com/sudnya/peoples-speech-tf-conformer) using the following command<br /><br />
  `git clone https://github.com/sudnya/peoples-speech-tf-conformer.git`<br /><br />
 2. Create a new virtual environment using the following command<br /><br />
 `python3 -m venv ~/environments-virtual/your-preferred-environment-name`<br /><br />
@@ -21,7 +21,7 @@ In this tutorial, we will learn to use this dataset to fine tune a pre-trained m
 
 # 2. The pretrained model
 The [TensorflowASR repository](https://github.com/TensorSpeech/TensorFlowASR) provides a pre-trained model of the subword Conformer ready to be downloaded from [here.](https://drive.google.com/drive/folders/1VAihgSB5vGXwIVTl3hkUk95joxY1YbfW)
-The [peoples-speech-tf-conformer repo] (https://github.com/sudnya/peoples-speech-tf-conformer) contains the necessary files of this pretrained model [here.](https://github.com/sudnya/peoples-speech-tf-conformer/tree/master/peoples_speech_tf_conformer/pretrained_subword_conformer).
+The [peoples-speech-tf-conformer repo](https://github.com/sudnya/peoples-speech-tf-conformer) contains the necessary files of this pretrained model [here.](https://github.com/sudnya/peoples-speech-tf-conformer/tree/master/peoples_speech_tf_conformer/pretrained_subword_conformer).
 
 # 3. Download the dataset
 #### 3.1 Download the manifest file
@@ -35,7 +35,7 @@ A small subset of the peoples speech dataset was downloaded by running the follo
 
 
 # 4. Update the config file
-An example configuration file can be found [here] (https://github.com/sudnya/peoples-speech-tf-conformer/blob/master/peoples-speech-dataset-config.yml)<br />
+An example configuration file can be found [here](https://github.com/sudnya/peoples-speech-tf-conformer/blob/master/peoples-speech-dataset-config.yml)<br />
 1. Update the path to the vocabulary file under the `decoder_config` section to the file downloaded in the pretrained model step above.<br /><br />
 `vocabulary: ~/path-to-the-pretrained-subword-conformer/conformer.subwords`<br /><br />
 2. Update the path to the `corpus_files` in the `decoder_config` to the dataset file for the dataset mentioned in the [download the dataset section](#3. Download the dataset). Note that the dataset file is expected to be jsonlines. Here is an example line that represents the expected format<br /><br />
@@ -44,7 +44,7 @@ An example configuration file can be found [here] (https://github.com/sudnya/peo
 3. Update the path to the `data_paths` in the `test_dataset_config` to point to the dataset file.
 
 # 5. Run a pretrained model to evaluate on dataset
-Run the pretrained model downloaded [in an earlier step] (# 2. Download the pretrained model) in predict mode on the dataset downloaded in the [download dataset step] (# 3. Download the dataset) with the the configuration file [described above] (# 4. Update the config file).<br /><br />
+Run the pretrained model downloaded [in an earlier step](# 2. Download the pretrained model) in predict mode on the dataset downloaded in the [download dataset step](# 3. Download the dataset) with the the configuration file [described above](# 4. Update the config file).<br /><br />
 `~> python peoples_speech_tf_conformer/run-peoples-speech.py --subwords`<br />
 
 The defaults are assumed to be<br />
