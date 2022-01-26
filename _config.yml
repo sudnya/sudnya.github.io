@@ -22,8 +22,8 @@ title: Sudnya Diamos
 email: sudnya@cs.stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This is where I plan to post my thoughts, notes and content worth sharing with the world.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://sudnya.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sudnya_
 github_username:  sudnya
 
